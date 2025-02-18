@@ -294,7 +294,7 @@ header {
 
 /* Two-Card Section */
 .office-info {
-    background: url('/assets/images/bg.jpg') no-repeat center center/cover;
+    background: url('assets/images/bg.jpg') no-repeat center center/cover;
     padding: 50px;
     text-align: center;
     color: white;
