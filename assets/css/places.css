@@ -1,0 +1,346 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #0c0b07;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #6b533c;
+}
+
+button,
+.btn-primary {
+    background-color: #6b533c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover,
+.btn-primary:hover {
+    background-color: #b9a185;
+}
+
+/* Header */
+header {
+    background-color: #dbd4cb;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px hsla(220, 68%, 12%, 0.1);
+}
+
+/* Hero Section */
+.city-hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #dbd4cb;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.city-hero__content {
+    width: 50%;
+}
+
+.consultation-form input,
+.consultation-form select {
+    width: 95%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.consultation-form input:focus,
+.consultation-form select:focus {
+    border-color: #f1ebc7;
+    transform: scale(1);
+}
+
+.consultation-form button {
+    width: 100%;
+    padding: 0.8rem;
+    background: #b2b782;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.consultation-form button:hover {
+    background: #d2d4a0ef;
+    transform: scale(1.05);
+}
+
+.city-hero__form {
+    width: 40%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 15px hsla(220, 68%, 12%, 0.1);
+    border-radius: 10px;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+/* Pricing Section */
+.pricing-packages {
+    text-align: center;
+    padding: 50px;
+    background: #b9a185;
+    color: #fff;
+}
+
+.packages-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.package-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    color: #0c0b07;
+    transition: all 0.3s ease-in-out;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Reviews Section */
+.reviews-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 30px;
+}
+
+.review-card {
+    background: #dbd4cb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px hsla(220, 68%, 12%, 0.1);
+}
+
+.livspace-reviews {
+    align-items: center;
+    text-align: center;
+}
+
+.review-card:hover {
+    background-color: #b9a185;
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+.recent-projects {
+    align-items: center;
+    text-align: center;
+
+}
+
+.reasons-to-love {
+    align-items: center;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    background-color: #6b533c;
+    color: #fff;
+    padding: 30px 20px;
+}
+
+.footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer__title {
+    color: #fff;
+}
+
+.footer__link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer__link:hover {
+    color: #b9a185;
+}
+
+.footer__bottom {
+    text-align: center;
+    align-items: center;
+}
+
+/* Social Media Links */
+.footer__social {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer__title {
+    font-size: 20px;
+    color: #ffffff;
+    /* Light white color */
+    margin-bottom: 10px;
+}
+
+/* Social Links Container */
+.footer__social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    /* Space between icons */
+}
+
+/* Social Media Icons */
+.footer__social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Light white background */
+    color: #ffffff;
+    /* Icon color */
+    font-size: 20px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect */
+.footer__social-link:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer__social-links {
+        gap: 10px;
+    }
+}
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .city-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .city-hero__content,
+    .city-hero__form {
+        width: 100%;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Two-Card Section */
+.office-info {
+    background: url('/assets/images/bg.jpg') no-repeat center center/cover;
+    padding: 50px;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+#office{
+    color: #ffffff;
+
+}
+
+/* Styling for Cards */
+.office-card {
+    color: #f5f5f5;
+    /* Light White */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 45%;
+    min-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Animation */
+.office-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Map Styling */
+.office-card.map iframe {
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .office-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .office-card {
+        width: 90%;
+    }
+}

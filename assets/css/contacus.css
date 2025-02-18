@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  --first-color: #6b533c; /* Primary color */
+  --first-color-lighten: #dbd4cb; /* Lightened primary color */
+  --title-color: #0c0b07; /* Title color */
+  --text-color: #6b533c; /* Text color */
+  --body-color: #f5f5f5; /* Background color, lightened for contrast */
+  --scrollbar-thumb: #b9a185; /* Scrollbar thumb color */
+  --box-shadow: hsla(220, 68%, 12%, 0.1); /* Box shadow, kept as is */
+  --dropdown-bg: #dbd4cb; /* Dropdown background */
+  --dropdown-hover: #6b533c; /* Dropdown hover color */
+  --card-bg: #fff; /* Card background, kept as white for contrast */
+  --button-hover: #b9a185; /* Button hover color */
+
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+@media screen and (min-width: 1024px) {
+  :root {
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  padding-top: var(--header-height);
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0px;
+}
+
+/* Contact Us Section */
+.contact-us {
+  padding: 5rem 0;
+  background-color: var(--body-color);
+}
+
+.section__title {
+  font-size: 2.5rem;
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.section__description {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.contact-us__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contact-us__form {
+  background-color: var(--body-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px var(--box-shadow);
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.form__group {
+  margin-bottom: 1.5rem;
+}
+
+.form__group input,
+.form__group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--first-color-lighten);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: border-color 0.3s;
+  background-color: var(--body-color);
+}
+
+.form__group input:focus,
+.form__group textarea:focus {
+  border-color: var(--first-color);
+  outline: none;
+}
+
+.form__group textarea {
+  resize: vertical;
+}
+
+.btn--primary {
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn--primary:hover {
+  background-color: var(--button-hover);
+}
+
+.contact-us__details {
+  background-color: var(--body-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px var(--box-shadow);
+  animation: fadeInRight 1s ease-in-out;
+}
+
+.contact-us__item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.contact-us__item i {
+  font-size: 1.5rem;
+  color: var(--first-color);
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+}
+
+.contact-us__item h3 {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-bottom: 0.75rem;
+}
+
+.contact-us__item p {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.contact-us__map {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 16px var(--box-shadow);
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media screen and (min-width: 768px) {
+  .contact-us__content {
+    grid-template-columns: 1fr 1fr;
+  }
+} 

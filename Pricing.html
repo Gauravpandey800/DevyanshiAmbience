@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design Price Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .hidden {
+            display: none;
+        }
+        .price {
+            font-size: 24px;
+            text-align: center;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+            select, input {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Interior Design Price Calculator</h2>
+        <label for="designType">Select Design Type:</label>
+        <select id="designType" onchange="updateDesignOptions()">
+            <option value="">--Select--</option>
+            <option value="kitchen">Modular Kitchen</option>
+            <option value="dining">Dining Room</option>
+            <option value="tile">Tile Design</option>
+            <option value="wardrobe">Wardrobe</option>
+            <option value="living">Living Room</option>
+            <option value="bathroom">Bathroom</option>
+            <option value="master_bedroom">Master Bedroom</option>
+            <option value="kids_room">Kid's Room</option>
+            <option value="balcony">Balcony</option>
+            <option value="pooja">Pooja Room</option>
+        </select>
+        
+        <label for="designQuality">Select Design Quality:</label>
+        <select id="designQuality" onchange="calculatePrice()">
+            <option value="basic">Basic</option>
+            <option value="standard">Standard</option>
+            <option value="premium">Premium</option>
+        </select>
+        
+        <div id="kitchenOptions" class="hidden">
+            <h3>Modular Kitchen Options</h3>
+            <label for="kitchenStyle">Choose Style:</label>
+            <select id="kitchenStyle" onchange="updateSizeInputs()">
+                <option value="">--Select--</option>
+                <option value="l_shaped">L-Shaped</option>
+                <option value="u_shaped">U-Shaped</option>
+                <option value="parallel">Parallel</option>
+                <option value="straight">Straight</option>
+            </select>
+            <div id="sizeInputs">
+                <label for="size1">Size 1 (ft):</label>
+                <input type="number" id="size1" oninput="calculatePrice()" placeholder="Enter size">
+                <label for="size2" id="size2Label">Size 2 (ft):</label>
+                <input type="number" id="size2" oninput="calculatePrice()" placeholder="Enter size">
+                <label for="size3" id="size3Label" class="hidden">Size 3 (ft):</label>
+                <input type="number" id="size3" class="hidden" oninput="calculatePrice()" placeholder="Enter size">
+            </div>
+        </div>
+
+        <div id="wardrobeOptions" class="hidden">
+            <h3>Wardrobe Options</h3>
+            <label for="wardrobeHeight">Choose Height:</label>
+            <select id="wardrobeHeight" onchange="calculatePrice()">
+                <option value="4">4 ft</option>
+                <option value="6">6 ft</option>
+                <option value="7">7 ft</option>
+                <option value="9">9 ft</option>
+            </select>
+            <label for="wardrobeStyle">Choose Style:</label>
+            <select id="wardrobeStyle" onchange="calculatePrice()">
+                <option value="sliding">Sliding</option>
+                <option value="swing">Swing</option>
+            </select>
+        </div>
+        
+        <h3 class="price">Total Price: ₹<span id="totalPrice">0</span></h3>
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
